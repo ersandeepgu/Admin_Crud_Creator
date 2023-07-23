@@ -17,4 +17,4 @@ You need to install this module.
 # Screen Shots
 
 ###### Minicart
-https://postimg.cc/LJ4fM8dT https://postimg.cc/YhzgVmP0 https://postimg.cc/ykHcvTv2 
+[![Screenshot-at-2023-07-23-17-13-24.png](https://i.postimg.cc/13wKw8JL/Screenshot-at-2023-07-23-17-13-24.png)](https://postimg.cc/LJ4fM8dT) 
