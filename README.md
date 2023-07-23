@@ -17,12 +17,5 @@ You need to install this module.
 # Screen Shots
 
 ###### Minicart
-[![Main page.png](https://www.awesomescreenshot.com/image/41694988?key=f157f9d5701dd5d174f0dbca47979ae0)](https://www.awesomescreenshot.com/image/41694988?key=f157f9d5701dd5d174f0dbca47979ae0)
+[url=https://postimg.cc/LJ4fM8dT][img]https://i.postimg.cc/LJ4fM8dT/Screenshot-at-2023-07-23-17-13-24.png[/img][/url]
 
-[![Shopping-Cart.png](https://i.postimg.cc/q75Zj8jq/Shopping-Cart.png)](https://postimg.cc/B82gv1Wf)
-
-###### Cart
-[![module-grid.png](https://www.awesomescreenshot.com/image/41695025?key=d2e0616371aa0892fe3fb42680c77baa)
-
-###### Checkout
-[![add-edit.png](https://www.awesomescreenshot.com/image/41695033?key=b992548d1bf726e9ee108083ddf51971)
