@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Ui:etc/ui_configuration.xsd">
+    <argument name="data" xsi:type="array">
+        <item name="js_config" xsi:type="array">
+            <item name="provider" xsi:type="string">modulecreator_form.modulecreator_form_data_source</item>
+            <item name="deps" xsi:type="string">modulecreator_form.modulecreator_form_data_source</item>
+        </item>
+        <item name="config" xsi:type="array">
+            <item name="dataScope" xsi:type="string">data</item>
+            <item name="namespace" xsi:type="string">modulecreator_form</item>
+        </item>
+        <item name="template" xsi:type="string">templates/form/collapsible</item>
+
+        <item name="buttons" xsi:type="array">           
+            <item name="save" xsi:type="array">
+                <item name="name" xsi:type="string">import</item>
+                <item name="label" xsi:type="string" translate="true">Generate Admin Crud</item>
+                <item name="class" xsi:type="string">primary</item>
+            </item>
+        </item>
+    </argument>
+    <dataSource name="modulecreator_form_data_source">
+        <argument name="dataProvider" xsi:type="configurableObject">
+            <argument name="class" xsi:type="string">Sandeep\ModuleCreator\Model\DataProvider</argument>
+            <argument name="name" xsi:type="string">modulecreator_form_data_source</argument>
+            <argument name="primaryFieldName" xsi:type="string">id</argument>
+            <argument name="requestFieldName" xsi:type="string">id</argument>
+        </argument>
+        <argument name="data" xsi:type="array">
+            <item name="js_config" xsi:type="array">
+                <item name="component" xsi:type="string">Magento_Ui/js/form/provider</item>
+                <item name="submit_url" path="*/*/save" xsi:type="url" />
+            </item>
+        </argument>
+    </dataSource>
+    <fieldset name="download_module">
+        <argument name="data" xsi:type="array">
+            <item name="config" xsi:type="array">
+                <item name="collapsible" xsi:type="boolean">false</item>
+               <item name="label" xsi:type="string" translate="true">Create Your Module</item>
+                <item name="sortOrder" xsi:type="number">20</item>                
+            </item>
+        </argument> 
+        <field name="namespace">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="label" xsi:type="string" translate="true">Company Name</item>
+                    <item name="dataType" xsi:type="string">text</item>
+                    <item name="formElement" xsi:type="string">input</item>
+                    <item name="sortOrder" xsi:type="number">10</item>
+                    <item name="validation" xsi:type="array">
+                        <item name="required-entry" xsi:type="boolean">true</item>
+                         <item name="validate-alpha" xsi:type="boolean">true</item>
+                    </item>
+                </item>
+            </argument>
+        </field>
+
+        <field name="module">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="label" xsi:type="string" translate="true">Module Name</item>
+                    <item name="dataType" xsi:type="string">text</item>
+                    <item name="formElement" xsi:type="string">input</item>
+                    <item name="sortOrder" xsi:type="number">20</item>
+                   <item name="validation" xsi:type="array">
+                        <item name="required-entry" xsi:type="boolean">true</item>
+                        <item name="validate-alpha" xsi:type="boolean">true</item>
+                    </item>
+                </item>
+            </argument>
+        </field> 
+        <container name="checkboxes_container" sortOrder="40">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="label" xsi:type="string" translate="true">Checkbox Fields</item>
+                </item>
+            </argument>
+            <field name="enable_default" formElement="checkbox">
+                <argument name="data" xsi:type="array">
+                    <item name="config" xsi:type="array">
+                        <item name="label" xsi:type="string" translate="true">Enable Default</item>
+                        <item name="dataType" xsi:type="string">boolean</item>
+                        <item name="prefer" xsi:type="string">toggle</item>
+                        <item name="valueMap" xsi:type="array">
+                            <item name="true" xsi:type="number">1</item>
+                            <item name="false" xsi:type="number">0</item>
+                        </item>
+                        <item name="sortOrder" xsi:type="number">40</item>
+                        <item name="notice" xsi:type="string">If you set this enable it will take some time to enable and setup this module for you..</item> 
+                    </item>
+                </argument>
+            </field>
+            <!-- <field name="only_backend" formElement="checkbox">
+                <argument name="data" xsi:type="array">
+                    <item name="config" xsi:type="array">
+                        <item name="label" xsi:type="string" translate="true">Need Admin CRUD</item>
+                        <item name="dataType" xsi:type="string">boolean</item>
+                        <item name="prefer" xsi:type="string">toggle</item>
+                        <item name="valueMap" xsi:type="array">
+                            <item name="true" xsi:type="number">1</item>
+                            <item name="false" xsi:type="number">0</item>
+                        </item>
+                        <item name="sortOrder" xsi:type="number">40</item>
+                    </item>
+                </argument>
+            </field>
+            <field name="only_frontend" formElement="checkbox">
+                <argument name="data" xsi:type="array">
+                    <item name="config" xsi:type="array">
+                        <item name="label" xsi:type="string" translate="true">Need Frontend</item>
+                        <item name="dataType" xsi:type="string">boolean</item>
+                        <item name="prefer" xsi:type="string">toggle</item>
+                        <item name="valueMap" xsi:type="array">
+                            <item name="true" xsi:type="number">1</item>
+                            <item name="false" xsi:type="number">0</item>
+                        </item>
+                        <item name="sortOrder" xsi:type="number">50</item>
+                    </item>
+                </argument>
+            </field>
+            <field name="frontend_css" formElement="checkbox">
+                <argument name="data" xsi:type="array">
+                    <item name="config" xsi:type="array">
+                        <item name="label" xsi:type="string" translate="true">Need Frontend custom CSS file for module page</item>
+                        <item name="dataType" xsi:type="string">boolean</item>
+                        <item name="prefer" xsi:type="string">toggle</item>
+                        <item name="valueMap" xsi:type="array">
+                            <item name="true" xsi:type="number">1</item>
+                            <item name="false" xsi:type="number">0</item>
+                        </item>
+                        <item name="sortOrder" xsi:type="number">60</item>
+                    </item>
+                </argument>
+            </field>
+            <field name="frontend_js" formElement="checkbox">
+                <argument name="data" xsi:type="array">
+                    <item name="config" xsi:type="array">
+                        <item name="label" xsi:type="string" translate="true">Need Frontend custom JS file for module page</item>
+                        <item name="dataType" xsi:type="string">boolean</item>
+                        <item name="prefer" xsi:type="string">toggle</item>
+                        <item name="valueMap" xsi:type="array">
+                            <item name="true" xsi:type="number">1</item>
+                            <item name="false" xsi:type="number">0</item>
+                        </item>
+                    </item>
+                </argument>
+            </field>           
+            <field name="insertdata_frontend" formElement="checkbox">
+                <argument name="data" xsi:type="array">
+                    <item name="config" xsi:type="array">
+                        <item name="label" xsi:type="string" translate="true">Need to insert data from frontend</item>
+                        <item name="dataType" xsi:type="string">boolean</item>
+                        <item name="prefer" xsi:type="string">toggle</item>
+                        <item name="valueMap" xsi:type="array">
+                            <item name="true" xsi:type="number">1</item>
+                            <item name="false" xsi:type="number">0</item>
+                        </item>
+                        <item name="sortOrder" xsi:type="number">80</item>
+                    </item>
+                </argument>
+            </field>
+            <field name="displaydata_frontend" formElement="checkbox">
+                <argument name="data" xsi:type="array">
+                    <item name="config" xsi:type="array">
+                        <item name="label" xsi:type="string" translate="true">Need to display data at frontend (List page with pagination and View page)</item>
+                        <item name="dataType" xsi:type="string">boolean</item>
+                        <item name="prefer" xsi:type="string">toggle</item>
+                        <item name="valueMap" xsi:type="array">
+                            <item name="true" xsi:type="number">1</item>
+                            <item name="false" xsi:type="number">0</item>
+                        </item>
+                        <item name="sortOrder" xsi:type="number">90</item>
+                    </item>
+                </argument>
+            </field>  --> 
+        </container>   
+    </fieldset>
+</form>

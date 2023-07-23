@@ -1,0 +1,20 @@
+@form-icons-admin__font-name-path: '@{baseDir}Sandeep_ModuleCreator/fonts/form';
+@form-icons-admin__font-name : 'CedReverb';
+
+.lib-font-face(
+  @family-name:@form-icons-admin__font-name,
+  @font-path: @form-icons-admin__font-name-path,
+  @font-weight: normal,
+  @font-style: normal
+);
+
+.admin__menu .item-core.parent.level-0 > a:before {
+  font-family: @form-icons-admin__font-name;
+  content: "\e901";
+  color: #8a9296;
+  display: block;
+  font-size: 3rem;
+  height: 3rem;
+}
+
+

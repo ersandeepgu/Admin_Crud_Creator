@@ -1,0 +1,15 @@
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:Acl/etc/acl.xsd">
+    <acl>
+        <resources>
+            <resource id="Magento_Backend::admin">
+                <resource id="Sandeep_ModuleCreator::core" title="Sandeep Module Creator" sortOrder="50">
+                    <resource id="Sandeep_ModuleCreator::mcreator" title="Module Creator">
+                        <resource id="Sandeep_ModuleCreator::creator" title="Module Creator" />
+                    </resource>        
+                </resource>
+            </resource>
+
+        </resources>
+    </acl>
+</config>
