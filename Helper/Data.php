@@ -315,6 +315,7 @@ class Data extends \Magento\Framework\App\Helper\AbstractHelper
             protected $collection;
             protected $addFieldStrategies;
             protected $addFilterStrategies;
+	    protected $collectionFactory;
 
             public function __construct(
                 $name,
@@ -371,6 +372,7 @@ class Data extends \Magento\Framework\App\Helper\AbstractHelper
             protected $collection;
             protected $addFieldStrategies;
             protected $addFilterStrategies;
+	    protected $collectionFactory;
 
             public function __construct(
                 $name,
